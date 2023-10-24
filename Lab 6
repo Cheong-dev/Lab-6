@@ -1,0 +1,55 @@
+#Cheongmin Lee's Encoder Function
+
+#Encodes user's password
+def encode(password):
+    final_password = ""
+
+    #Iterate through the string and make each string an intger and then add it to the final_password
+    for value in password:
+        new_value = 0
+        new_value = int(value) + 3
+        final_password += str(new_value % 10)
+    return final_password
+
+"""
+#Cheongmin's Decode function the encoded code
+def decoder(encoded_passsword):
+    final_password = ""
+
+    #Iterate through each integer in the the encoded password and decode it and add to final password
+    for value in encoded_passsword:
+        new_value = int(value) + 7
+        final_password += str(new_value%10)
+    
+    return final_password
+"""
+
+def main():
+
+    user_password = "" # Hold the user's encoded password
+
+    #Loop until user quits
+    while True:
+        #Print out menu each time
+        print(f"Menu")
+        print(f"-------------")
+        print(f"1. Encode")
+        print(f"2. Decode")
+        print(f"3. Quit\n")
+        user_input = int(input("Please enter an option: "))
+
+        #Encode user password
+        if user_input == 1:
+            encode_password = input("Please enter your password to encode: ")
+            user_password = encode(encode_password)
+            print(f"You password has been encoded and stored!\n")
+        
+        #Decode the users password
+        elif user_input == 2:
+            pass
+
+        elif user_input == 3:
+            break
+
+if __name__ == "__main__":
+    main()
