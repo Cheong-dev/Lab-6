@@ -11,7 +11,12 @@ def encode(password):
         final_password += str(new_value % 10)
     return final_password
 
-
+# Samy's Decoding function
+def decoder(p):
+    temp = ""
+    for i in p:
+        temp += str((int(i) + 7) % 10)
+    return temp
 
 def main():
 
