@@ -11,18 +11,7 @@ def encode(password):
         final_password += str(new_value % 10)
     return final_password
 
-"""
-#Cheongmin's Decode function the encoded code
-def decoder(encoded_passsword):
-    final_password = ""
 
-    #Iterate through each integer in the the encoded password and decode it and add to final password
-    for value in encoded_passsword:
-        new_value = int(value) + 7
-        final_password += str(new_value%10)
-    
-    return final_password
-"""
 
 def main():
 
