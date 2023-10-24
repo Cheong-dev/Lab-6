@@ -40,7 +40,7 @@ def main():
         
         #Decode the users password
         elif user_input == 2:
-            pass
+            print(f"The encoded password is {decoder(user_password)}, and the original password is {user_password}.")
 
         elif user_input == 3:
             break
